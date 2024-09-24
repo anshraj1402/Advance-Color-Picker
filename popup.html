@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advance Color Picker</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&display=swap');
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 10px;
+            background-color: #f4f4f4;
+            border-radius: 10px; /* Slightly curved edges for the popup */
+            border: none; /* Remove any border from the body */
+        }
+
+        #mainCont {
+            min-width: 200px;
+            text-align: center;
+        }
+
+        #mainCont > h1 {
+            font-family: 'sans-serif', Helvetica;
+            margin: 0;
+            margin-bottom: 15px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        #picker_btn {
+            padding: 10px 15px;
+            border-radius: 10px; /* Slightly curved edges for the button */
+            background-color: #007bff;
+            border: none;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: all 0.3s;
+            margin-top: 15px;
+        }
+
+        #picker_btn:hover {
+            background-color: #0056b3;
+        }
+
+        #result {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        #result > li {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 10px;
+            font-weight: bold;
+            font-size: 14px;
+            border-radius: 5px; /* Slightly curved edges for the color boxes */
+            width: 100%;
+            box-shadow: none; /* Remove shadow */
+            margin-bottom: 10px; /* Space between color boxes */
+            border: none; /* Remove border */
+            background-color: transparent; /* Ensure background is transparent to avoid extra styling */
+        }
+
+        .color-swatch {
+            width: 20px;
+            height: 20px;
+            margin-right: 10px;
+            border-radius: 5px; /* Slightly curved edges for the color swatches */
+            border: none; /* Remove border */
+        }
+
+        .errorLabel {
+            color: white;
+            font-weight: bold;
+            padding: 5px;
+            text-align: center;
+            margin: 0;
+            margin-top: 20px;
+            font-size: 14px;
+            border-radius: 10px;
+            background-color: #ff4f4f;
+        }
+    </style>
+</head>
+<body>
+    <div id="mainCont">
+        <h1>Available Colors</h1>
+        <ul id="result"></ul>
+        <button id="picker_btn">Search</button>
+    </div>
+    <script src="popup.js"></script>
+</body>
+</html>
